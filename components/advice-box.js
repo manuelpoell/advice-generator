@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import useWindowDimensions from '../utils/getWindowSize'
-import DICE from '../public/images/icon-dice.svg'
-import DIVIDER_DESKTOP from '../public/images/pattern-divider-desktop.svg'
-import DIVIDER_MOBILE from '../public/images/pattern-divider-mobile.svg'
+import DICE from '/public/images/icon-dice.svg'
+import DIVIDER_DESKTOP from '/public/images/pattern-divider-desktop.svg'
+import DIVIDER_MOBILE from '/public/images/pattern-divider-mobile.svg'
 
 const AdviceBox = () => {
   const [adviceId, setAdviceId] = useState(0)
