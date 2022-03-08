@@ -1,9 +1,0 @@
-node_modules
-.next
-.github
-.eslintrc.json
-next.config.js
-package.json
-package-lock.json
-prettier.config.js
-*.md
