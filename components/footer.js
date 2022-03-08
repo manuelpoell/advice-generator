@@ -9,7 +9,7 @@ const Footer = () => {
       >
         Frontend Mentor
       </a>
-      . Coded by <a href="https://github.com/manuelpoell">Manuel Pöll</a>.
+      . Coded by <a href="https://manuelpoell.github.io">Manuel Pöll</a>.
     </div>
   )
 }

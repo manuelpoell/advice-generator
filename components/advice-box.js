@@ -1,9 +1,5 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import useWindowDimensions from '../utils/getWindowSize'
-import DICE from '/public/images/icon-dice.svg'
-import DIVIDER_DESKTOP from '/public/images/pattern-divider-desktop.svg'
-import DIVIDER_MOBILE from '/public/images/pattern-divider-mobile.svg'
 
 const AdviceBox = () => {
   const [adviceId, setAdviceId] = useState(0)
@@ -20,14 +16,17 @@ const AdviceBox = () => {
 
   const { width } = useWindowDimensions()
   const isMobile = width && width < 800
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const dividerSrc = prefix + (isMobile ? '/images/pattern-divider-mobile.svg' : '/images/pattern-divider-desktop.svg')
+  const diceSrc = prefix + '/images/icon-dice.svg'
 
   return (
     <div className="advice-box">
       <div className="advice-index">ADVICE #{adviceId}</div>
       <p className="advice-quote">&quot;{adviceText}&quot;</p>
-      <Image src={isMobile ? DIVIDER_MOBILE : DIVIDER_DESKTOP} alt="divider" />
+      <img src={dividerSrc} alt="divider" />
       <button className="generator-button" onClick={fetchAdvice}>
-        <Image src={DICE} alt="dice" />
+        <img src={diceSrc} alt="dice" />
       </button>
     </div>
   )

@@ -9,5 +9,5 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")]
   },
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH
 }
